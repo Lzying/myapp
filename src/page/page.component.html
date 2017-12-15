@@ -1,38 +1,71 @@
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="/" >Navbar</a>
-    <button class="navbar-toggler" (click)="isShow = !isShow">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+<div class="navbar-wrapper">
+    <div class="container">
 
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault" [style.display]="isShow ? 'block' : 'none'">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" routerLink="/page/onepage">首页</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/page/user">用户管理</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/page/student">学生系统</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle"id="dropdown01" (click)="thisShow = !thisShow" style="cursor:pointer;">友情链接</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown01" [style.display]="thisShow ? 'block' : 'none'">
-                    <a class="dropdown-item" href="http://www.baidu.com" target="_blank">学校网站</a>
-                    <a class="dropdown-item" href="http://www.bootcss.com/" target="_blank">一卡通网页</a>
-                    <a class="dropdown-item" href="https://github.com/angular/angular-cli" target="_blank">教务系统</a>
-                </div>
-            </li>
-            
-            <li class="nav-item ">
-                    <a class="nav-link" routerLink='/login'>登录</a>
-            </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0">搜索</button>
-        </form>
+      <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" (click)="isShow=!isShow">
+              <span class="sr-only"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">管理系统</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse" [style.display]="isShow ? 'block':'none'">
+            <ul class="nav navbar-nav">
+              <li class="active"><a routerLink="/page/onepage">首页</a></li>
+              <li><a routerLink="/page/user">用户管理</a></li>
+              <li><a routerLink="/page/student">学生管理</a></li>
+              <li class="dropdown">
+                <a  class="dropdown-toggle"  (click)="thisShow=!thisShow">导航 <span class="caret"></span></a>
+                <ul class="dropdown-menu" [style.display]="thisShow ? 'block':'none'">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+              <li><a routerLink="/login">登录</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
     </div>
-</nav>
+  </div>
+
+
+  <!-- Carousel
+  ================================================== -->
+  <div  class="carousel">
+    <carousel>
+      <slide>
+        <img src="assets/img/11.jpg" alt="First slide" style="display: block; width: 100%;">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>
+      </slide>
+      <slide>
+        <img src="assets/img/12.jpg" alt="Second slide" style="display: block; width: 100%;">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </slide>
+      <slide>
+        <img src="assets/img/13.jpg" alt="Third slide" style="display: block; width: 100%;">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Third slide label</h3>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </div>
+      </slide>
+    </carousel>
+  </div>
+ 
 <div class="page"><router-outlet></router-outlet></div>
 

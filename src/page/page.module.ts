@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { pageRoutes } from './page.routes';
 import { PageComponent } from './page.component';
 import { LoginModule } from './login/login.module';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 @NgModule({
     declarations: [
@@ -12,6 +13,8 @@ import { LoginModule } from './login/login.module';
     imports: [
         CommonModule,
         LoginModule,
+        CarouselModule,
+        CarouselModule.forRoot(),
         RouterModule.forChild(pageRoutes)
     ],
     providers: [],
