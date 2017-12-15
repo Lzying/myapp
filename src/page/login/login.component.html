@@ -1,29 +1,18 @@
-<h1>q请登录</h1>
-<button routerLink="/page/user">登录</button>
-
-
-<div class="btn-group" dropdown>
-    <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">
-        Button dropdown
-        <span class="caret"></span>
-    </button>
-    <ul *dropdownMenu class="dropdown-menu" role="menu">
-        <li role="menuitem">
-            <a class="dropdown-item" href="#">Action</a>
-        </li>
-        <li role="menuitem">
-            <a class="dropdown-item" href="#">Another action</a>
-        </li>
-        <li role="menuitem">
-            <a class="dropdown-item" href="#">Something else here</a>
-        </li>
-        <li class="divider dropdown-divider"></li>
-        <li role="menuitem">
-            <a class="dropdown-item" href="#">Separated link</a>
-        </li>
-    </ul>
+<div class="login">
+    <h2 class="logintext">请登录</h2>
+    <form>
+        <div >
+            <label style="width:100%;" for="username">
+                用户名：
+                <input id="username" style="width:70%;" type="text" required>
+            </label>
+        </div>
+        <div>
+            <label style="width:100%;" for="userpassword">
+                用户名：
+                <input style="width:70%;" id="userpassword" type="text" required>
+            </label>
+        </div>
+        <button  routerLink="/page/user">登录</button>
+    </form>
 </div>
-
-<button type="button" class="btn btn-primary" tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-    Simple demo
-</button>
