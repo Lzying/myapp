@@ -1,18 +1,16 @@
 <div class="login">
     <h2 class="logintext">请登录</h2>
     <form>
-        <div >
-            <label style="width:100%;" for="username">
-                用户名：
-                <input id="username" style="width:70%;" type="text" required>
-            </label>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user"></span></span>
+            <input required type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1" required>
         </div>
-        <div>
-            <label style="width:100%;" for="userpassword">
-                用户名：
-                <input style="width:70%;" id="userpassword" type="text" required>
-            </label>
+        <p style="color:red;" >请输入用户名</p>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-eye-close"></i></span>
+            <input required type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1" required>
         </div>
-        <button  routerLink="/page/user">登录</button>
+        <p style="color:red;" >请输入密码</p>
+        <button type="button" routerLink="/page/user">登录</button>
     </form>
 </div>
