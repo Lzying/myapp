@@ -14,9 +14,9 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse" [style.display]="isShow ? 'block':'none'">
             <ul class="nav navbar-nav">
-              <li class="active"><a routerLink="/page/onepage">首页</a></li>
-              <li><a routerLink="/page/user">用户管理</a></li>
-              <li><a routerLink="/page/student">学生管理</a></li>
+              <li [class.active]="SelectOnepage" (click)="selectedOnepage()"><a routerLink="/page/onepage">首页</a></li>
+              <li [class.active]="SelectUser" (click)="selectedUser()"><a routerLink="/page/user">用户管理</a></li>
+              <li [class.active]="SelectStudent" (click)="selectedStudent()"><a routerLink="/page/student">学生管理</a></li>
               <li class="dropdown">
                 <a  class="dropdown-toggle"  (click)="thisShow=!thisShow">导航 <span class="caret"></span></a>
                 <ul class="dropdown-menu" [style.display]="thisShow ? 'block':'none'">
